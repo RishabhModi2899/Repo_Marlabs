@@ -1,0 +1,30 @@
+.hero {
+    height: 50vh;
+    background-image: url('path-to-hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.product-item img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Product Section */
+.product-item h3 {
+    margin-top: 15px;
+}
+
+/* About Us Section */
+.about img {
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,30 @@
+<!-- src/app/components/todo/todo.component.html -->
+
+<div class="todo-container">
+  <h1>Todo List</h1>
+
+  <!-- Add Todo Form -->
+  <form (submit)="addTodo(); $event.preventDefault();" class="todo-form">
+    <div class="input-group">
+      <label for="title">Title:</label>
+      <input id="title" [(ngModel)]="newTodo.title" name="title" required />
+    </div>
+    <div class="input-group">
+      <label for="description">Description:</label>
+      <input id="description" [(ngModel)]="newTodo.description" name="description" required />
+    </div>
+    <button type="submit" class="add-button">Add Todo</button>
+  </form>
+
+  <!-- Todo Items -->
+  <ul class="todo-list">
+    <li *ngFor="let todo of todos" class="todo-item">
+      <div class="todo-details">
+        <h3>{{ todo.title }}</h3>
+        <p>{{ todo.description }}</p>
+      </div>
+      <button (click)="deleteTodo(todo._id)" class="delete-button">Delete</button>
+    </li>
+  </ul>
+</div>
+
